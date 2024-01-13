@@ -14,7 +14,7 @@ setup(
       "einops==0.7.0",
       "huggingface-hub==0.20.2",
       "transformers==4.36.2",
-      "git+https://github.com/google/array_record.git@2ac1d904f6be31e5aa2f09549774af65d84bff5a",
-      "git+https://github.com/kvablack/dlimp@d08da3852c149548aaa8551186d619d87375df08",
+      "array-record @ git+https://github.com/google/array_record.git@2ac1d904f6be31e5aa2f09549774af65d84bff5a",
+      "dlimp @ git+https://github.com/kvablack/dlimp@d08da3852c149548aaa8551186d619d87375df08",
     ],
 )
