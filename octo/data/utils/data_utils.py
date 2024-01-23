@@ -35,6 +35,7 @@ class NormalizationType(str, Enum):
 
     NORMAL = "normal"  # normalize to mean 0, std 1
     BOUNDS = "bounds"  # normalize to [-1, 1]
+    NONE = "none"  # do not normalize
 
 
 def to_padding(tensor: tf.Tensor) -> tf.Tensor:
@@ -228,6 +229,9 @@ def normalize_action_and_proprio(
                 ),
             )
         return traj
+    if normalization_type == NormalizationType.NONE:
+        return traj
+
 
     raise ValueError(f"Unknown normalization type {normalization_type}")
 
