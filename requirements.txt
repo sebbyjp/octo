@@ -5,7 +5,8 @@ chex == 0.1.85
 optax == 0.1.5
 tensorflow_probability == 0.23.0
 tensorflow == 2.15.0
-jax == 0.4.20
+jax == 0.4.23
+jaxlib==0.4.23
 distrax == 0.1.5
 flax == 0.7.5
 ml_collections >= 0.1.0
@@ -19,9 +20,9 @@ moviepy >= 1.0.3
 pre-commit == 3.3.3
 transformers >= 4.34.1
 tensorflow_hub >= 0.14.0
-tensorflow_text >= 2.13.0
+# tensorflow_text >= 2.13.0
 tensorflow_datasets == 4.9.2
-tensorflow_graphics == 2021.12.3
+# tensorflow_graphics == 2021.12.3
 dlimp @ git+https://github.com/kvablack/dlimp@d08da3852c149548aaa8551186d619d87375df08
 plotly >= 5.16.1
 matplotlib
