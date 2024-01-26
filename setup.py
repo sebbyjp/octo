@@ -12,7 +12,7 @@ setup(
       "flax==0.7.5",
       "distrax==0.1.5",
       "einops==0.7.0",
-      "huggingface-hub==0.20.2",
+      "huggingface-hub>=0.16.4",
       "transformers>=4.34.1",
       "dlimp @ git+https://github.com/kvablack/dlimp@d08da3852c149548aaa8551186d619d87375df08",
     ],
