@@ -424,7 +424,7 @@ def make_single_dataset(
     train: bool,
     traj_transform_kwargs: dict = {},
     frame_transform_kwargs: dict = {},
-) -> dl.DLataset:
+) -> dl.DLataset, dict:
     """Creates a single dataset from kwargs. Returns a dataset of trajectories.
 
     Args:
@@ -433,12 +433,10 @@ def make_single_dataset(
         traj_transform_kwargs: kwargs passed to 'apply_trajectory_transforms'.
         frame_transform_kwargs: kwargs passed to 'get_frame_transforms'.
     """
-    print('\n\n\n this RAN!! \n\n\n')
     dataset, dataset_statistics = make_dataset_from_rlds(
         **dataset_kwargs,
         train=train,
     )
-    print('\n\n\ndataset stats: ', dataset_statistics)
 
     dataset = apply_trajectory_transforms(dataset, **traj_transform_kwargs, train=train)
     dataset = apply_frame_transforms(dataset, **frame_transform_kwargs, train=train)
@@ -447,9 +445,9 @@ def make_single_dataset(
     dataset = dataset.with_ram_budget(1)
 
     # save for later
-    print('\n\n\ndataset stats: ', dataset_statistics)
     dataset.dataset_statistics = dataset_statistics
-    return dataset
+    return dataset, dataset_statistics
+
 
 
 def make_interleaved_dataset(
@@ -557,4 +555,5 @@ def make_interleaved_dataset(
     # save for later
     dataset.dataset_statistics = all_dataset_statistics
     dataset.sample_weights = sample_weights
-    return dataset
+    return dataset, all_dataset_statistics, sample_weights
+
