@@ -444,6 +444,7 @@ def make_single_dataset(
     dataset = dataset.with_ram_budget(1)
 
     # save for later
+    print('\n\n\ndataset stats: ', dataset_statistics)
     dataset.dataset_statistics = dataset_statistics
     return dataset
 
