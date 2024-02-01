@@ -424,7 +424,7 @@ def make_single_dataset(
     train: bool,
     traj_transform_kwargs: dict = {},
     frame_transform_kwargs: dict = {},
-) -> dl.DLataset, dict:
+) -> (dl.DLataset, dict):
     """Creates a single dataset from kwargs. Returns a dataset of trajectories.
 
     Args:
