@@ -140,7 +140,7 @@ EEF_POSE_MAGIC_SOUP = [
     ("stanford_hydra_dataset_converted_externally_to_rlds", 2.0),
     ("austin_buds_dataset_converted_externally_to_rlds", 1.0),
     ("ucsd_kitchen_dataset_converted_externally_to_rlds", 2.0),
-    ("bc_z", 0.2),
+    # ("bc_z", 0.2),
     ("dlr_edan_shared_control_converted_externally_to_rlds", 1.0),
     ("iamlab_cmu_pickup_insert_converted_externally_to_rlds", 1.0),
     ("utaustin_mutex", 1.0),
