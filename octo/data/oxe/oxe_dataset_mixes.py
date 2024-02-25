@@ -167,4 +167,5 @@ OXE_NAMED_MIXES = {
     "rtx_franka": RT_X_MIX + OXE_FRANKA_MIX,
     "oxe_magic_soup": OXE_MAGIC_SOUP,
     "eef_pose_magic_soup": EEF_POSE_MAGIC_SOUP,
+    "eef_pose_small": EEF_POSE_SMALL,
 }
