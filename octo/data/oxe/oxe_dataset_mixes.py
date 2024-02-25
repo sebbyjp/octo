@@ -151,7 +151,6 @@ EEF_POSE_MAGIC_SOUP = [
 EEF_POSE_SMALL = [
     ("fractal20220817_data", 0.54087122203),
     ("kuka", 0.8341046294),
-    ("bridge_dataset", 1.0),
     ("taco_play", 2.0),
     ("jaco_play", 2.0),
     ("roboturk", 1.0),
