@@ -148,11 +148,23 @@ EEF_POSE_MAGIC_SOUP = [
     ("cmu_stretch", 1.0),
 ]
 
+EEF_POSE_SMALL = [
+    ("fractal20220817_data", 0.54087122203),
+    ("kuka", 0.8341046294),
+    ("bridge_dataset", 1.0),
+    ("taco_play", 2.0),
+    ("jaco_play", 2.0),
+    ("roboturk", 1.0),
+    ("nyu_door_opening_surprising_effectiveness", 5.0),
+    ("viola", 2.0),
+    ("berkeley_autolab_ur5", 1.0),
+]
+
 
 OXE_NAMED_MIXES = {
     "bridge": BRIDGE_MIX,
     "rtx": RT_X_MIX,
     "rtx_franka": RT_X_MIX + OXE_FRANKA_MIX,
     "oxe_magic_soup": OXE_MAGIC_SOUP,
-    "ee_pose_magic_soup": EEF_POSE_MAGIC_SOUP,
+    "eef_pose_magic_soup": EEF_POSE_MAGIC_SOUP,
 }
