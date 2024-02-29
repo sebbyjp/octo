@@ -102,11 +102,11 @@ def make_oxe_dataset_kwargs_and_weights(
     Returns:
         Tuple of (dataset_kwargs_list, sampling weights).
     """
+    if len(data_mix) == 1:
+        data_mix = data_mix[0]
     if isinstance(data_mix, str):
         data_mix = OXE_NAMED_MIXES.get(data_mix, [(data_mix, 1.0)])
     elif isinstance(data_mix, list):
-        if len(data_mix) == 1:
-              data_mix = OXE_NAMED_MIXES.get([data_mix[0]], [(data_mix[0], 1.0)])
         if not all(isinstance(item, tuple) and len(item) == 2 for item in data_mix):
             logging.warn(
                 "data_mix should be a list of (dataset name, sampling weight) tuples. Setting all weights to 1.0."
