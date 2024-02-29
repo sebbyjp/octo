@@ -108,7 +108,7 @@ def main(_):
 
     # wrap the robot environment
     env = UnnormalizeActionProprio(
-        env, model.dataset_statistics["bridge_dataset"], normalization_type="normal"
+        env, model.dataset_statistics["bridge"], normalization_type="normal"
     )
     env = HistoryWrapper(env, FLAGS.horizon)
     env = TemporalEnsembleWrapper(env, FLAGS.pred_horizon)

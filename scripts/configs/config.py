@@ -101,7 +101,7 @@ def get_config(
             ),
             wandb_resume_id=placeholder(str),
             eval_datasets=(
-                "bridge_dataset",
+                "bridge",
                 "taco_play",
                 "berkeley_cable_routing",
                 "berkeley_autolab_ur5",

@@ -1,4 +1,4 @@
-tests/debug_dataset/bridge_dataset/1.0.0/dataset_statistics_*.json
+tests/debug_dataset/bridge/1.0.0/dataset_statistics_*.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -165,4 +165,4 @@ wandb
 *.sif
 .vscode
 .idea
-datasets/debug_dataset/bridge_dataset/1.0.0/action_*
+datasets/debug_dataset/bridge/1.0.0/action_*

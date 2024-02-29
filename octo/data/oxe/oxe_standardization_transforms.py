@@ -24,13 +24,16 @@ from octo.data.utils.data_utils import (
 )
 
 
-def bridge_dataset_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
+def bridge_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
     # NOTE: this is not actually the official OXE copy of bridge, it is our own more up-to-date copy that you
     # can find at https://rail.eecs.berkeley.edu/datasets/bridge_release/data/tfds/
+    
+    
     trajectory["action"] = tf.concat(
         [
-            trajectory["action"][:, :6],
-            binarize_gripper_actions(trajectory["action"][:, -1])[:, None],
+            trajectory["action"]["world_vector"],
+            trajectory["action"]["rotation_delta"],
+            tf.cast(trajectory["action"]["open_gripper"], tf.float32)[:, None],
         ],
         axis=1,
     )
@@ -38,6 +41,9 @@ def bridge_dataset_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
     trajectory["observation"]["EEF_state"] = trajectory["observation"]["state"][:, :6]
     trajectory["observation"]["gripper_state"] = trajectory["observation"]["state"][
         :, -1:
+    ]
+    trajectory["language_instruction"] = trajectory["observation"][
+        "natural_language_instruction"
     ]
     return trajectory
 
@@ -795,7 +801,7 @@ def gnm_dataset_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
 
 
 OXE_STANDARDIZATION_TRANSFORMS = {
-    "bridge_dataset": bridge_dataset_transform,
+    "bridge": bridge_transform,
     "fractal20220817_data": rt1_dataset_transform,
     "kuka": kuka_dataset_transform,
     "taco_play": taco_play_dataset_transform,

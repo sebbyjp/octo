@@ -137,7 +137,7 @@ def get_config(config_string=None):
                 hf_model="t5-base",
             ),
         ),
-        eval_datasets=["bridge_dataset"],
+        eval_datasets=["bridge"],
     )
 
     return config

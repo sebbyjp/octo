@@ -46,7 +46,7 @@ def get_config():
         dataset_kwargs={
             "dataset_kwargs_list": [
                 {
-                    "name": "bridge_dataset",
+                    "name": "bridge",
                     "data_dir": "./tests/debug_dataset",
                     "image_obs_keys": {"primary": "image_0"},
                     "state_obs_keys": ["state"],

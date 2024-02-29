@@ -2,8 +2,8 @@
   "citation": "// TODO(example_dataset): BibTeX citation",
   "description": "TODO(example_dataset): Markdown description of your dataset.\nDescription is **formatted** as markdown.\n\nIt should also contain any processing which has been applied (if any),\n(e.g. corrupted example skipped, images cropped,...):",
   "fileFormat": "tfrecord",
-  "moduleName": "bridge_dataset.bridge_dataset_dataset_builder",
-  "name": "bridge_dataset",
+  "moduleName": "bridge.bridge_dataset_builder",
+  "name": "bridge",
   "releaseNotes": {
     "1.0.0": "Initial release."
   },
