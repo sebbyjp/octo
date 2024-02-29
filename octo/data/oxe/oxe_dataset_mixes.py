@@ -183,4 +183,5 @@ OXE_NAMED_MIXES = {
     "oxe_magic_soup": OXE_MAGIC_SOUP,
     "eef_pose_magic_soup": EEF_POSE_MAGIC_SOUP,
     "eef_pose_small": EEF_POSE_SMALL,
+    "eef_pose_small_bridge": EEF_POSE_SMALL_BRIDGE,
 }
