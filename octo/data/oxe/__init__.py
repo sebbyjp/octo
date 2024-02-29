@@ -103,7 +103,7 @@ def make_oxe_dataset_kwargs_and_weights(
         Tuple of (dataset_kwargs_list, sampling weights).
     """
     if isinstance(data_mix, str):
-        data_mix = OXE_NAMED_MIXES[data_mix]
+        data_mix = OXE_NAMED_MIXES.get(data_mix, [(data_mix, 1.0)])
 
     filtered_datasets, included_dataset_names = [], []
     for name, weight in data_mix:
