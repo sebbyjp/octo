@@ -14,6 +14,6 @@ setup(
       "einops==0.7.0",
       "huggingface-hub>=0.16.4",
       "transformers>=4.34.1",
-      "dlimp @ git+https://github.com/kvablack/dlimp@d08da3852c149548aaa8551186d619d87375df08",
+      "dlimp @ git+https://github.com/mbodied/dlimp",
     ],
 )
