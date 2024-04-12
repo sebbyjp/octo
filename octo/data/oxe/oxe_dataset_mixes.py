@@ -168,7 +168,7 @@ EEF_POSE_SMALL = [
 
 EEF_POSE_NO_FRACTAL = [
     ("kuka", 0.8341046294),
-    ("bridge ", 1.0), 
+    ("bridge", 1.0), 
     ("taco_play", 2.0),
     ("jaco_play", 2.0),
     ("roboturk", 1.0),
