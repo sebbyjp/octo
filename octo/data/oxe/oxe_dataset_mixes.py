@@ -149,20 +149,10 @@ EEF_POSE_MAGIC_SOUP = [
     ("cmu_stretch", 1.0),
 ]
 
+
+
+
 EEF_POSE_SMALL = [
-    ("fractal20220817_data", 0.54087122203),
-    ("kuka", 0.8341046294),
-    ("taco_play", 2.0),
-    ("jaco_play", 2.0),
-    ("roboturk", 1.0),
-    ("nyu_door_opening_surprising_effectiveness", 5.0),
-    ("viola", 2.0),
-    ("berkeley_autolab_ur5", 1.0),
-]
-
-
-
-EEF_POSE_SMALL_BRIDGE = [
     ("fractal20220817_data", 0.54087122203),
     ("kuka", 0.8341046294),
     ("bridge ", 1.0), 
@@ -172,6 +162,21 @@ EEF_POSE_SMALL_BRIDGE = [
     ("nyu_door_opening_surprising_effectiveness", 5.0),
     ("viola", 2.0),
     ("berkeley_autolab_ur5", 1.0),
+    ("cmu_franka_exploration_dataset_converted_externally_to_rlds",2.0),
+    ("ucsd_kitchen_dataset_converted_externally_to_rlds", 2.0),
+]
+
+EEF_POSE_NO_FRACTAL = [
+    ("kuka", 0.8341046294),
+    ("bridge ", 1.0), 
+    ("taco_play", 2.0),
+    ("jaco_play", 2.0),
+    ("roboturk", 1.0),
+    ("nyu_door_opening_surprising_effectiveness", 5.0),
+    ("viola", 2.0),
+    ("berkeley_autolab_ur5", 1.0),
+    ("cmu_franka_exploration_dataset_converted_externally_to_rlds",2.0),
+    ("ucsd_kitchen_dataset_converted_externally_to_rlds", 2.0),
 ]
 
 
