@@ -102,6 +102,7 @@ def make_oxe_dataset_kwargs_and_weights(
     Returns:
         Tuple of (dataset_kwargs_list, sampling weights).
     """
+    print(f'Loading data mix: {data_mix}')
     if len(data_mix) == 1:
         data_mix = data_mix[0]
     if isinstance(data_mix, str):
@@ -112,6 +113,10 @@ def make_oxe_dataset_kwargs_and_weights(
                 "data_mix should be a list of (dataset name, sampling weight) tuples. Setting all weights to 1.0."
             )
             data_mix = [(name, 1.0) for name in data_mix]
+    else:
+        raise ValueError(f'data mix {data_mix} not supported')
+
+    
 
     filtered_datasets, included_dataset_names = [], []
     for name, weight in data_mix:
